@@ -19,7 +19,7 @@ non-tail-recursive version? Why, or why not, and what is the complexity
 (worst-case $\Theta$)? Add your answer, including your reasoning, to this
 markdown file.
 
-The non-tail recursive fibonacci function has a worst case asymptotic complexity of $\Theta(2^n)$, because every iteration adds two recursive calls, each running at most n times before it reaches the base case. The number of recursive calls would therefore double at every call, $2^n$. 
+The non-tail recursive fibonacci function has a worst case asymptotic complexity of $\Theta(2^n)$, because every iteration adds two recursive calls, each running at most n times before it reaches the base case. The number of recursive calls would therefore double at every call, at most n times, $2^n$. 
 
 I believe the tail-recursive iteration would be different, because it only has one recursive call per iteration, which would run in linear time n before it reaches the base case and ends. Therefore the worst-case asymptotic complexity of the tail-recursive fibonacci sequence would be $\Theta(n)$. 
 
