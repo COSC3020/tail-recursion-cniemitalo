@@ -1,7 +1,7 @@
 function tFib(n, fib, fibOld) {
     //return the final value 
-    //ends here because we've already checked first two cases
-    if (n === 2) return fib; 
+    //ends here because we start at base case 1 
+    if (n === 1) return fib; 
 
     //calculate the previous two numbers 
     //similar to iterative 
@@ -16,8 +16,7 @@ function tFib(n, fib, fibOld) {
 
 function fib(n) {
     //base cases
-    if (n === 0) return 0; 
-    if (n === 1) return 1; 
+    if (n === 0) return 0;  
 
     //start with base cases 0, 1 and build up from there
     return tFib(n, 1, 0); 
