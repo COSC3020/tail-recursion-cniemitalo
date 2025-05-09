@@ -1,13 +1,13 @@
 function tFib(n, fib, fibOld) {
     //return the final value 
-    //starts here, since fibNew is by default 1 
-    if (n === 1) return fibNew; 
+    //ends here because we've already checked first two cases
+    if (n === 2) return fib; 
 
-    //calculate previous + current 
+    //calculate the previous two numbers 
     //similar to iterative 
-    let fibNew = fib; 
+    let tmp = fib; 
     fib = fib + fibOld; 
-    fibOld = fibNew; 
+    fibOld = tmp; 
 
     //keep track of n iterations
     //pass new values 
@@ -15,9 +15,10 @@ function tFib(n, fib, fibOld) {
 }
 
 function fib(n) {
-    //base case 
+    //base cases
     if (n === 0) return 0; 
+    if (n === 1) return 1; 
 
-    //start with first two of sequence (0, 1)
+    //start with base cases 0, 1 and build up from there
     return tFib(n, 1, 0); 
 }
